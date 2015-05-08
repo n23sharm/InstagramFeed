@@ -50,7 +50,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         let profileURL = NSURL(string: json.valueForKeyPath("user.profile_picture") as! String)!
         let instaURL = NSURL(string: json.valueForKeyPath("images.standard_resolution.url") as! String)!
         
-        cell.profileImage.setImageWithURL(instaURL)
+        cell.profileImage.setImageWithURL(profileURL)
         cell.instaImage.setImageWithURL(instaURL)
         
         return cell

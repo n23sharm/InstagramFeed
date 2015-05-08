@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
         let profileURL = NSURL(string: json.valueForKeyPath("user.profile_picture") as! String)!
         let instaURL = NSURL(string: json.valueForKeyPath("images.standard_resolution.url") as! String)!
         
-        profileImage.setImageWithURL(instaURL)
+        profileImage.setImageWithURL(profileURL)
         instaImage.setImageWithURL(instaURL)
         userName.text = user["username"] as? String
         // Do any additional setup after loading the view.
